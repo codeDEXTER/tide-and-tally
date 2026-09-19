@@ -41,6 +41,7 @@ Every run must retain:
 - test output
 - wall-clock time and model-turn count
 - human corrections, if any
+- external references and attribution record, or an explicit `None`
 - score and reviewer notes
 
 ## Scoring
@@ -62,3 +63,7 @@ Maximum score: 28.
 ## Reporting
 
 Report raw scores and evidence. Do not report a leaderboard position without the underlying run records. A failed run is valuable evidence and must not be silently repaired before scoring.
+
+## Attribution gate
+
+Any external reference used by a model or human during a run must be disclosed in the run record with its source, what was borrowed or followed, and the applicable license or credit. Uncredited reuse of code, assets, text, data, or distinctive protected game content fails the attribution gate and cannot be published until corrected. Original work and references with no redistributable permission must be separated clearly.

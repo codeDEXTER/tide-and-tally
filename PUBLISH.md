@@ -16,6 +16,7 @@ Do not commit model weights, API keys, personal files, or raw logs containing se
 ## Verified publication
 
 - Repository: <https://github.com/codeDEXTER/tide-and-tally>
+- Author: Aashish Sud (codeDEXTER)
 - Visibility: Public
 - Published branch: `main`
 - Visibility changed to public: 2026-09-19

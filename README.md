@@ -78,3 +78,11 @@ Browser trading game · merchant sailing game · dependency-free JavaScript game
 ## License
 
 The source code and original project materials are available under the [MIT License](LICENSE). The GLM-5.3-Flash model, Colibrì runtime, and any third-party components remain under their own licenses.
+
+## Author
+
+Created by **Aashish Sud (codeDEXTER)**.
+
+## Attribution rule
+
+Any external code, art, data, documentation, design reference, or model-generated material used in a contribution must be identified and credited with its source and license. The benchmark treats uncredited reuse as a failure; the game remains original and does not use protected Tradewinds assets or content.

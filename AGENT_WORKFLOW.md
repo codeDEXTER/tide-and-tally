@@ -36,6 +36,8 @@ Constraints:
 - Keep the project dependency-free.
 - Preserve the existing game rules unless the task changes them.
 - Inspect relevant files before editing.
+- If using an external reference, code sample, dataset, model output, or asset, record its source and give appropriate credit before finishing.
+- Do not copy protected game assets, characters, dialogue, or source code; use only material with compatible permission or license.
 - Make the smallest coherent change.
 - Run ./tests/smoke.sh after editing.
 - Report changed files, test output, and any remaining uncertainty.
@@ -51,6 +53,10 @@ Constraints:
 6. Manually play the affected path in the browser.
 7. Feed failures back to the model.
 8. Review the diff and record the result in `RUN_LOG.md`.
+
+## Attribution and reference constraint
+
+Every model run must disclose meaningful external references used during implementation. The run record must name the source, provide a URL or local origin when available, explain what was used, and include the applicable license or attribution requirement. This includes code snippets, documentation, datasets, images, sounds, fonts, design references, and generated model output. If no external reference was used, record `None`. Uncredited reuse is a benchmark failure and must be corrected before publication.
 
 ## Suggested local API shape
 
