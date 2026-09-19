@@ -49,6 +49,8 @@ See [PROJECT_BRIEF.md](PROJECT_BRIEF.md), [GAME_SCOPE.md](GAME_SCOPE.md), [AGENT
 
 For the machine-specific model experiment, see [COLIBRI_RUN_PLAN.md](COLIBRI_RUN_PLAN.md). For the comparative model plan and autonomous modules, see [COMPARATIVE_BENCHMARK.md](COMPARATIVE_BENCHMARK.md). For publication, see [PUBLISH.md](PUBLISH.md).
 
+For the local model catalog and recommendations for Apple Silicon, see [MODEL_CATALOG.md](MODEL_CATALOG.md).
+
 ## Run the game
 
 Open `index.html` in a browser. No package installation is required.

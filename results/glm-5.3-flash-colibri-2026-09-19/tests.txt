@@ -1,0 +1,7 @@
+Colibri startup smoke: PASS
+Prompt: Reply with exactly OK.
+Output began with: OK
+Generated: 8 tokens
+Decode: 193.6 seconds total, 0.041 tokens/second, 24.2 seconds/token
+Expert residency: 312 hits, 3,616 misses
+Capacity note: deep doctor reports the model is structurally valid but RAM-constrained and disk-miss limited.
