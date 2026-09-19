@@ -126,3 +126,5 @@ The existing human-authored POC should not be used to claim model completion tim
 Each run stores the exact prompt, model ID, runtime, settings, transcript, diff, tests, wall-clock timings, score, corrections, references, and reviewer notes. A failed or incomplete run is retained as evidence rather than repaired before scoring.
 
 See [BENCHMARK_PROTOCOL.md](BENCHMARK_PROTOCOL.md) for the shared protocol and [results/benchmark-dashboard.html](results/benchmark-dashboard.html) for the non-result chart layout.
+
+The controlled prompt files are listed in [benchmark/prompts/README.md](benchmark/prompts/README.md).

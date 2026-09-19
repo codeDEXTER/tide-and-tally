@@ -1,6 +1,8 @@
 {
   "model": "",
   "model_version": "",
+  "model_lane": "",
+  "effort_setting": "",
   "runtime": "",
   "runtime_version": "",
   "format": "",
@@ -9,9 +11,12 @@
   "memory_gb": 16,
   "model_storage": "",
   "task": "",
+  "module": "",
+  "prompt_file": "",
   "started_at": "",
   "wall_clock_seconds": null,
   "model_turns": null,
+  "clarification_requests": 0,
   "tests_passed": false,
   "human_corrections": 0,
   "scores": {
@@ -23,5 +28,6 @@
     "debugging": null,
     "human_correction_load": null
   },
+  "references": [],
   "notes": ""
 }

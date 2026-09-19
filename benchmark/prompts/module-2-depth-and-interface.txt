@@ -1,0 +1,5 @@
+You are working on Tide & Tally: The Model Harbor.
+
+Module goal: complete the fixed depth and interface requirements without breaking the existing trading loop. Add or correct a ship-hold upgrade and a small deterministic sea-event system, keeping the game playable, dependency-free, and within GAME_SCOPE.md. Events must be understandable to the player and reproducible enough to test. Preserve existing controls and restart behavior.
+
+Work autonomously with no human implementation input. Inspect the current state, implement the smallest coherent change, run ./tests/smoke.sh and node --check game.js, and review git diff --check. Do not install packages or copy external assets/content. If an ambiguity appears, choose the simplest scope-preserving behavior and document it in your final summary. The module ends at 35 minutes; leave the best working state and report changed files, tests, and limitations.

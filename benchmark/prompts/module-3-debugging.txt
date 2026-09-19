@@ -1,0 +1,5 @@
+You are working on Tide & Tally: The Model Harbor.
+
+Module goal: diagnose and repair the seeded accounting or price bug present in the current repository. First reproduce the incorrect behavior, identify the invariant that is violated, then make the smallest focused fix. Do not redesign the game or change the written rules. Add or improve a focused regression check if the repository's dependency-free test boundary allows it.
+
+Work autonomously with no human implementation input. Run the relevant checks, including ./tests/smoke.sh, node --check game.js, and git diff --check. Do not install packages or copy external code/assets. If the bug cannot be reproduced within the time limit, explain the evidence and leave the repository unchanged rather than guessing. The module ends at 30 minutes; report reproduction, cause, fix, tests, and any uncertainty.

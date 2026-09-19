@@ -1,0 +1,10 @@
+You are working on Tide & Tally: The Model Harbor.
+
+Module goal: understand the repository well enough to plan the remaining work. Do not edit product files, tests, or documentation. Inspect the repository and run only read-only commands. In your response, provide:
+
+1. The game state model and current user flow.
+2. The market, travel, turn, upgrade, and win/loss rules you actually observed.
+3. The files that would need to change to complete the fixed v1 scope.
+4. A short ordered implementation plan and risks.
+
+You have no human implementation guidance during this module. Save your response only in the run transcript; do not create files. Stop when the plan is complete or when the 10-minute module limit is reached.

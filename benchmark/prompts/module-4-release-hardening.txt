@@ -1,0 +1,5 @@
+You are working on Tide & Tally: The Model Harbor.
+
+Module goal: prepare the current game for a small public release without expanding the game scope. Improve accessibility and responsive presentation where needed, clarify the README or game instructions, and strengthen the existing smoke checks for behavior you can verify locally. Preserve the dependency-free boundary, original game identity, and all existing rules.
+
+Work autonomously with no human implementation input. Run ./tests/smoke.sh, node --check game.js, git diff --check, and perform the available local browser/manual review if your environment supports it. Do not install packages, add telemetry, copy external content, or conceal failures. Record any external references and their licenses. The module ends at 35 minutes; report the final diff, checks, manual result, references, and remaining risks.

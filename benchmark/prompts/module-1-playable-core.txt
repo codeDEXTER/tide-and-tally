@@ -1,0 +1,5 @@
+You are working on Tide & Tally: The Model Harbor.
+
+Module goal: implement or complete the fixed v1 playable merchant-trading loop from the current repository state. The player must be able to inspect prices at five ports, buy and sell four goods within cargo capacity, travel while consuming turns, restart the voyage, and reach a win or loss state. Preserve the dependency-free HTML/CSS/JavaScript boundary and the rules in GAME_SCOPE.md. Do not add a framework, backend, package installation, multiplayer, or copied third-party game content.
+
+Work autonomously: inspect files, plan briefly, edit the repository, run ./tests/smoke.sh, run node --check game.js, and review your diff. Do not ask for or wait for human implementation input. If something is ambiguous, make the smallest decision consistent with the written scope and record it in your final summary. The module ends at 45 minutes; leave the best working state and report changed files, tests, and known limitations.
