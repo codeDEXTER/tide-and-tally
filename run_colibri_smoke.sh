@@ -5,7 +5,7 @@ set -euo pipefail
 # accidentally use a different Python, model, or runtime.
 COLIBRI_PYTHON="${COLIBRI_PYTHON:-/Users/aashish/apps/Loom/.venv-loom-ai/bin/python}"
 COLIBRI_SOURCE="${COLIBRI_SOURCE:-/Users/aashish/apps/Loom/.colibri-src}"
-COLIBRI_MODEL="${COLIBRI_MODEL:-/Volumes/T9/loom-ai-models/models/GLM-5.3-Flash-colibri-i4}"
+COLIBRI_MODEL="${COLIBRI_MODEL:-/Volumes/T9/loom-ai-models/models/GLM-5.3-Flash-i4}"
 
 if [[ ! -x "$COLIBRI_PYTHON" ]]; then
   print -u2 "Missing Colibrì Python: $COLIBRI_PYTHON"

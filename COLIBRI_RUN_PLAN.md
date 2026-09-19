@@ -8,7 +8,9 @@ This document records the machine-specific path for the benchmark. It is intenti
 - T9 mounted at `/Volumes/T9`; the latest check reports approximately 1.5 TiB available
 - The complete raw `GLM-5.3-Flash` checkpoint is present at `/Volumes/T9/loom-ai-models/models/GLM-5.3-Flash`
 - It contains all 62 safetensor shards and is about 328.3 GB on disk; Colibrì `doctor --deep` validates the shard sequence, required tensors, index, and internal layouts
-- The raw checkpoint is FP8 (`F8_E4M3`) and is not directly runnable by the engine; the resumable int4 conversion is in progress at `/Volumes/T9/loom-ai-models/models/GLM-5.3-Flash-colibri-i4`
+- The raw checkpoint is FP8 (`F8_E4M3`) and is not directly runnable by the engine; the canonical int4 conversion is being performed by the other local session at `/Volumes/T9/loom-ai-models/models/GLM-5.3-Flash-i4`
+- This session's duplicate conversion was stopped after 16 shards and its 48 GB scratch output was removed. Do not launch a second conversion against the same raw source.
+- At the last terminal check, the other session had 22 converted shards and was still active. Wait for its completion before validation or inference.
 - The conversion has completed shard 1 (4.16 GB output in 52 seconds); the remaining 61 shards are still processing
 - This is `GLM-5.3-Flash`, not the full `GLM-5.3` checkpoint. No full `GLM-5.3` checkpoint is currently verified on the machine.
 - The Colibrì source checkout is `/Users/aashish/apps/Loom/.colibri-src`; the Apple Silicon `glm53` engine is built there
@@ -39,7 +41,7 @@ The direct raw-checkpoint smoke command was:
   "Reply with exactly OK."
 ```
 
-It reached the engine and failed because the source tensor was `F8_E4M3`; this is the expected signal that conversion is required, not a model-quality result. The one-shard conversion then succeeded, producing a 4.16 GB int4 shard in 52 seconds. The full conversion is resumable through `c/tools/convert_glm53.py` and must complete before the first real inference result is scored.
+It reached the engine and failed because the source tensor was `F8_E4M3`; this is the expected signal that conversion is required, not a model-quality result. The one-shard conversion then succeeded, producing a 4.16 GB int4 shard in 52 seconds. The other session's full conversion is resumable through `c/tools/convert_glm53.py` and must complete before the first real inference result is scored.
 
 ## Expected experiment order
 

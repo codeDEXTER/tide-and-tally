@@ -13,4 +13,4 @@ Use this file to record each controlled model run.
 | Raw checkpoint | `coli doctor --deep` on all 62 raw shards | Config, tensor layouts, shard sequence, required tensors, and index passed |
 | Raw smoke | One-token `coli run` with `--no-think` | Correctly rejected FP8 source tensor; conversion required |
 | Conversion test | One-shard `convert_glm53.py` run | Passed in 52 seconds; 4.16 GB int4 output |
-| Full conversion | Resumable 62-shard conversion on T9 | In progress; do not score until complete |
+| Full conversion | Other local session at `/Volumes/T9/loom-ai-models/models/GLM-5.3-Flash-i4` | In progress; duplicate stopped and removed; do not score until complete |
