@@ -43,20 +43,30 @@ The current repository is the reference implementation of the complete minimum g
 | Lane | Candidate | Purpose | Execution boundary |
 |---|---|---|---|
 | Local constrained | GLM-5.3-Flash through Colibrì | Test privacy, storage-streaming, and low-memory local coding. | M1 Pro, 16 GB RAM, T9; record cold/warm cache and time-to-first-token. |
-| Claude budget | Claude Haiku 4.5 through Claude Code | Low-cost, fast hosted coding-agent comparison. | Same repository, prompts, module limits, and no human hints. |
+| Codex cost-efficient | GPT-5.6 Luna through Codex | Fastest/lowest-cost Codex lane; the direct Codex reference requested for this experiment. | Record model, effort, and Codex surface. |
+| Claude budget | Claude Haiku 4.5 through Claude Code | Closest Claude role match to Luna: small, fast, cost-efficient coding-agent comparison. | Same repository, prompts, module limits, and no human hints. |
 | Claude balanced | Claude Sonnet 4.6 through Claude Code, **high effort** | Recommended first Claude run: strong coding quality with a reasonable cost/time profile. | Same as above; record exact model ID and effort setting. |
 | Claude frontier | Claude Opus 5 through Claude Code, **very high/max effort** | Premium upper-bound control for the best autonomous completion we can obtain from Claude. | Run after Sonnet; record exact model ID, effort, and cost. |
 | Frontier control | GPT-5.3-Codex through Codex cloud | Reference for what a current frontier coding agent does with the same task. | Isolated cloud task; export transcript, diff, tests, and elapsed time. |
 
 Claude Haiku 4.5 is the recommended “low-level” Claude lane: Anthropic describes it as its small, faster, lower-cost model and explicitly positions it for Claude Code and rapid prototyping. Sonnet 4.6 is a useful second Claude lane because it is a stronger control while remaining below the premium Opus tier. Model names and availability must be rechecked at run time.
 
+### Codex Luna ↔ Claude mapping
+
+There is no official one-to-one equivalence between vendors. By product role, **GPT-5.6 Luna maps most closely to Claude Haiku 4.5**: both are the economical, fast lane intended for high-volume or rapid coding work. This is a *tier/role comparison*, not a claim that the models have equal capability. Use the same module prompts and compare measured completion, quality, latency, and correction load.
+
+For a quality-matched comparison rather than a cost/speed-matched comparison, pair **GPT-5.6 Luna with Claude Sonnet 4.6 at high effort** and label the pair “cost-efficient Codex vs. balanced Claude.” Sonnet will be the stronger Claude control and should not be described as Luna-equivalent without measured evidence.
+
 ### Recommended order
 
-1. Run Sonnet 4.6 at high effort first. This is the primary Claude baseline.
-2. Run Haiku 4.5 at its normal/default effort to measure the economical lane.
-3. Run Opus 5 at very high/max effort only after the protocol and scoring are stable. Treat it as an upper-bound quality comparison, not the default model.
+1. Run GPT-5.6 Luna at a fixed medium or high effort. This is the Codex cost-efficient baseline.
+2. Run Claude Haiku 4.5 at its normal/default effort. This is the closest Claude role match.
+3. Run Sonnet 4.6 at high effort as the stronger Claude control.
+4. Run Opus 5 at very high/max effort only after the protocol and scoring are stable. Treat it as an upper-bound quality comparison, not the default model.
 
 If the Claude interface exposes only qualitative choices such as “high” and “very high,” record the exact displayed choice in the run metadata. Do not compare a high-effort Sonnet score directly with a max-effort Opus score without showing the effort setting.
+
+OpenAI describes GPT-5.6 Luna as its fastest and most affordable GPT-5.6 tier, optimized for cost-sensitive workloads. Anthropic describes Haiku 4.5 as its small, faster, lower-cost model and makes it available in Claude Code. See the [GPT-5.6 Luna model page](https://developers.openai.com/api/docs/models/gpt-5.6-luna) and [Anthropic's Claude Haiku 4.5 announcement](https://www.anthropic.com/news/claude-haiku-4-5). Recheck availability and model IDs when each run starts.
 
 ## Measurements
 
