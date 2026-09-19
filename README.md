@@ -1,6 +1,8 @@
-# Tide & Tally
+# Tide & Tally: The Model Harbor
 
-Tide & Tally is a public-minded benchmark project for testing whether different AI models can incrementally build and improve the same small game under identical rules.
+Tide & Tally is the short name for a public-minded benchmark project testing whether different AI models can incrementally build and improve the same small game under identical rules.
+
+*A fair harbor for testing how AI models build software.*
 
 ## The game
 

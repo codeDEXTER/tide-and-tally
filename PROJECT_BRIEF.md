@@ -1,10 +1,16 @@
 # Project brief
 
-## Public name
+## Public identity
 
-**Tide & Tally**
+**Tide & Tally: The Model Harbor**
 
-The name signals the two central systems: sailing conditions and commercial accounting. It is short, memorable, and distinct from the inspiration.
+Short name: **Tide & Tally**
+
+Repository slug: `tide-and-tally`
+
+The name signals the two central systems: sailing conditions and commercial accounting. “The Model Harbor” makes the public purpose explicit: this is a safe harbor where coding models can be evaluated by building the same small game under the same rules. The title is short enough for a game, distinctive enough for a public repository, and clearly separate from the classic game that inspired the merchant-sailing loop.
+
+Public tagline: *A fair harbor for testing how AI models build software.*
 
 ## Purpose
 
