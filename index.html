@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tide &amp; Tally</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div>
+        <p class="eyebrow">GLM-5.3 / Colibrì POC</p>
+        <h1>Tide &amp; Tally</h1>
+        <p class="lede">Buy low. Sail smart. Build your fortune.</p>
+      </div>
+      <div class="stats" aria-label="Game status">
+        <span>Gold <strong id="gold">600</strong></span>
+        <span>Cargo <strong id="cargo">0/6</strong></span>
+        <span>Turns <strong id="turns">24</strong></span>
+      </div>
+    </header>
+
+    <section class="game-panel" aria-labelledby="game-heading">
+      <div class="panel-row">
+        <h2 id="game-heading">Harbor map</h2>
+        <p id="message" role="status">Choose a port, then trade.</p>
+      </div>
+      <div id="board" class="board" role="application" aria-label="Tide &amp; Tally port map"></div>
+      <section class="market" aria-labelledby="market-heading">
+        <div class="panel-row"><h2 id="market-heading">Market at <span id="port-name">Azure Quay</span></h2><p>Prices change by port.</p></div>
+        <div id="market-list" class="market-list"></div>
+      </section>
+      <div class="controls">
+        <span>Reach <strong>2,000 gold</strong> before your turns run out.</span>
+        <button id="upgrade" type="button">Upgrade ship</button>
+        <button id="restart" type="button">Restart voyage</button>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

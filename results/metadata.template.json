@@ -1,0 +1,27 @@
+{
+  "model": "",
+  "model_version": "",
+  "runtime": "",
+  "runtime_version": "",
+  "format": "",
+  "quantization": "",
+  "hardware": "Apple M1 Pro",
+  "memory_gb": 16,
+  "model_storage": "",
+  "task": "",
+  "started_at": "",
+  "wall_clock_seconds": null,
+  "model_turns": null,
+  "tests_passed": false,
+  "human_corrections": 0,
+  "scores": {
+    "requirements": null,
+    "correctness": null,
+    "tests": null,
+    "scope": null,
+    "maintainability": null,
+    "debugging": null,
+    "human_correction_load": null
+  },
+  "notes": ""
+}
