@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tide &amp; Tally benchmark dashboard mockup</title>
+<style>
+  :root { color-scheme: light dark; font-family: system-ui, sans-serif; --bg: light-dark(#f7f5ef, #171918); --fg: light-dark(#17201d, #edf2ee); --muted: light-dark(#5d6b65, #aab9b1); --line: light-dark(#ccd4ce, #3b4741); --one: #167c80; --two: #d4773c; --three: #7762b5; --four: #bf9b37; }
+  body { margin: 0; padding: 2rem; background: var(--bg); color: var(--fg); }
+  main { max-width: 1100px; margin: auto; }
+  h1 { margin-bottom: .25rem; } p { color: var(--muted); }
+  .notice { border-left: 4px solid var(--two); padding: .75rem 1rem; margin: 1rem 0 2rem; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+  section { min-width: 0; } h2 { font-size: 1rem; }
+  svg { width: 100%; height: auto; overflow: visible; }
+  .axis, .gridline { stroke: var(--line); stroke-width: 1; } .gridline { opacity: .55; }
+  text { fill: var(--fg); font-size: 12px; } .muted { fill: var(--muted); }
+  .bar.one, .cell.one { fill: var(--one); } .bar.two, .cell.two { fill: var(--two); } .bar.three, .cell.three { fill: var(--three); } .bar.four, .cell.four { fill: var(--four); }
+  .dot { fill: var(--two); stroke: var(--fg); stroke-width: 2; } .line { stroke: var(--one); stroke-width: 3; fill: none; }
+  @media (max-width: 720px) { body { padding: 1rem; } .grid { grid-template-columns: 1fr; } }
+</style>
+<main>
+  <h1>Comparative benchmark dashboard</h1>
+  <p>Design mockup only — sample values are not benchmark results.</p>
+  <div class="notice">Replace the sample series with measured run records only after each autonomous module has been scored.</div>
+  <div class="grid">
+    <section><h2>Completion by module (%)</h2><svg viewBox="0 0 520 250" role="img" aria-label="Illustrative completion bars by model and module">
+      <line class="axis" x1="100" y1="20" x2="100" y2="215"/><line class="axis" x1="100" y1="215" x2="500" y2="215"/>
+      <text x="8" y="58">GLM local</text><text x="8" y="103">Haiku</text><text x="8" y="148">Sonnet</text><text x="8" y="193">Codex</text>
+      <rect class="bar one" x="100" y="42" width="150" height="18"/><rect class="bar two" x="250" y="42" width="100" height="18"/><rect class="bar three" x="350" y="42" width="50" height="18"/><rect class="bar four" x="400" y="42" width="50" height="18"/>
+      <rect class="bar one" x="100" y="87" width="200" height="18"/><rect class="bar two" x="300" y="87" width="100" height="18"/><rect class="bar three" x="400" y="87" width="50" height="18"/><rect class="bar four" x="450" y="87" width="50" height="18"/>
+      <rect class="bar one" x="100" y="132" width="200" height="18"/><rect class="bar two" x="300" y="132" width="150" height="18"/><rect class="bar three" x="450" y="132" width="25" height="18"/><rect class="bar four" x="475" y="132" width="25" height="18"/>
+      <rect class="bar one" x="100" y="177" width="200" height="18"/><rect class="bar two" x="300" y="177" width="150" height="18"/><rect class="bar three" x="450" y="177" width="50" height="18"/>
+      <text class="muted" x="96" y="236">M1</text><text class="muted" x="196" y="236">M2</text><text class="muted" x="296" y="236">M3</text><text class="muted" x="396" y="236">M4</text><text class="muted" x="486" y="236">100%</text>
+    </svg></section>
+    <section><h2>Quality vs. elapsed time</h2><svg viewBox="0 0 520 250" role="img" aria-label="Illustrative quality score versus elapsed hours">
+      <line class="axis" x1="55" y1="20" x2="55" y2="215"/><line class="axis" x1="55" y1="215" x2="500" y2="215"/><line class="gridline" x1="55" y1="118" x2="500" y2="118"/><line class="gridline" x1="55" y1="69" x2="500" y2="69"/>
+      <text class="muted" x="7" y="219">0</text><text class="muted" x="7" y="122">14</text><text class="muted" x="7" y="73">21</text><text class="muted" x="7" y="25">28</text><text class="muted" x="210" y="244">elapsed hours →</text><text class="muted" transform="translate(14 155) rotate(-90)">score</text>
+      <circle class="dot" cx="430" cy="112" r="7"/><text x="440" y="108">GLM</text><circle class="dot" cx="280" cy="85" r="7"/><text x="290" y="81">Haiku</text><circle class="dot" cx="210" cy="61" r="7"/><text x="220" y="57">Sonnet</text><circle class="dot" cx="130" cy="38" r="7"/><text x="140" y="34">Codex</text>
+    </svg></section>
+    <section><h2>Module heatmap (0–4)</h2><svg viewBox="0 0 520 250" role="img" aria-label="Illustrative module score heatmap">
+      <text x="170" y="25">M1</text><text x="245" y="25">M2</text><text x="320" y="25">M3</text><text x="395" y="25">M4</text><text x="15" y="65">GLM local</text><text x="15" y="105">Haiku</text><text x="15" y="145">Sonnet</text><text x="15" y="185">Codex</text>
+      <rect class="cell two" x="150" y="42" width="60" height="28"/><rect class="cell one" x="225" y="42" width="60" height="28"/><rect class="cell one" x="300" y="42" width="60" height="28"/><rect class="cell two" x="375" y="42" width="60" height="28"/>
+      <rect class="cell three" x="150" y="82" width="60" height="28"/><rect class="cell two" x="225" y="82" width="60" height="28"/><rect class="cell two" x="300" y="82" width="60" height="28"/><rect class="cell three" x="375" y="82" width="60" height="28"/>
+      <rect class="cell three" x="150" y="122" width="60" height="28"/><rect class="cell three" x="225" y="122" width="60" height="28"/><rect class="cell three" x="300" y="122" width="60" height="28"/><rect class="cell three" x="375" y="122" width="60" height="28"/>
+      <rect class="cell four" x="150" y="162" width="60" height="28"/><rect class="cell four" x="225" y="162" width="60" height="28"/><rect class="cell three" x="300" y="162" width="60" height="28"/><rect class="cell four" x="375" y="162" width="60" height="28"/>
+      <text x="177" y="61">2</text><text x="252" y="61">1</text><text x="327" y="61">1</text><text x="402" y="61">2</text><text x="177" y="101">3</text><text x="252" y="101">2</text><text x="327" y="101">2</text><text x="402" y="101">3</text><text x="177" y="141">3</text><text x="252" y="141">3</text><text x="327" y="141">3</text><text x="402" y="141">3</text><text x="177" y="181">4</text><text x="252" y="181">4</text><text x="327" y="181">3</text><text x="402" y="181">4</text>
+    </svg></section>
+    <section><h2>Human correction minutes</h2><svg viewBox="0 0 520 250" role="img" aria-label="Illustrative human correction time bars">
+      <line class="axis" x1="115" y1="20" x2="115" y2="215"/><line class="axis" x1="115" y1="215" x2="500" y2="215"/>
+      <text x="20" y="62">GLM local</text><text x="20" y="107">Haiku</text><text x="20" y="152">Sonnet</text><text x="20" y="197">Codex</text>
+      <rect class="bar two" x="115" y="45" width="310" height="20"/><rect class="bar two" x="115" y="90" width="190" height="20"/><rect class="bar two" x="115" y="135" width="100" height="20"/><rect class="bar two" x="115" y="180" width="45" height="20"/>
+      <text class="muted" x="115" y="236">0</text><text class="muted" x="287" y="236">30</text><text class="muted" x="475" y="236">60 min</text>
+    </svg></section>
+  </div>
+</main>
+</html>

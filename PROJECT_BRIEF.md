@@ -24,6 +24,7 @@ Create a repeatable testbed for comparing coding models. Every model should rece
 - tool use
 - human correction load
 - speed and cost
+- autonomous completion of each fixed module without additional implementation input
 
 ## Product boundary
 
@@ -41,6 +42,8 @@ The base project is a browser game with no build system, framework, external ass
 8. Score the resulting behavior and tests, not just the amount of code produced.
 9. Never expose secrets or unrelated files to the model.
 10. Preserve the full prompt, tool trace, diff, test output, and final score.
+11. Every module has a fixed goal and acceptance gate; do not provide additional implementation guidance after the module begins.
+12. Record and credit every external reference used by a model or reviewer.
 
 ## Safety and publishing boundary
 
