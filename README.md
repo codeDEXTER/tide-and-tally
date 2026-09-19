@@ -35,6 +35,8 @@ Each model receives the same repository, requirements, prompts, time budget, and
 
 See [PROJECT_BRIEF.md](PROJECT_BRIEF.md), [GAME_SCOPE.md](GAME_SCOPE.md), [AGENT_WORKFLOW.md](AGENT_WORKFLOW.md), and [BENCHMARK.md](BENCHMARK.md) for the controlled plan.
 
+For the machine-specific model experiment, see [COLIBRI_RUN_PLAN.md](COLIBRI_RUN_PLAN.md). For publication, see [PUBLISH.md](PUBLISH.md).
+
 ## Run the game
 
 Open `index.html` in a browser. No package installation is required.
