@@ -59,4 +59,4 @@ Then open <http://127.0.0.1:8080>.
 
 ## Repository status
 
-The intended public repository name is `tide-and-tally`. The local POC folder is `tide-and-tally-poc`.
+The repository is currently private at <https://github.com/codeDEXTER/tide-and-tally>. The intended public repository name is `tide-and-tally`; the local POC folder is `tide-and-tally-poc`.
