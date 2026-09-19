@@ -1,8 +1,12 @@
 # Tide & Tally: The Model Harbor
 
-Tide & Tally is the short name for a public-minded benchmark project testing whether different AI models can incrementally build and improve the same small game under identical rules.
+Tide & Tally is a small, dependency-free browser merchant trading game and an open benchmark for testing how local AI coding models build software over time.
 
 *A fair harbor for testing how AI models build software.*
+
+![Tide & Tally: The Model Harbor](assets/tide-and-tally-harbor.png)
+
+Tide & Tally combines a classic buy-low, sell-high sailing loop with a reproducible local-LLM coding experiment. Models receive the same game, requirements, prompts, time budget, and checks, so future runs can be compared fairly.
 
 ## The game
 
@@ -15,6 +19,12 @@ Tide & Tally is an original, dependency-free browser game inspired by the mercha
 - Respond to occasional sea events.
 
 The game is intentionally small, deterministic, and easy to test. It does not copy Tradewinds’ assets, characters, dialogue, story, or interface. The benchmark measures implementation quality, not artistic imitation.
+
+## How to play
+
+Start with 600 gold and a six-unit cargo hold. Visit the five ports, buy goods where prices are low, sail to better markets, and build enough profit to reach 2,000 gold before the 24-turn voyage ends. Ship upgrades increase capacity and create another decision point.
+
+The harbor artwork above is original concept art for the game world; the playable interface is rendered in HTML, CSS, and JavaScript.
 
 ## Hardware target
 
@@ -59,4 +69,12 @@ Then open <http://127.0.0.1:8080>.
 
 ## Repository status
 
-The repository is currently private at <https://github.com/codeDEXTER/tide-and-tally>. The intended public repository name is `tide-and-tally`; the local POC folder is `tide-and-tally-poc`.
+The public repository is <https://github.com/codeDEXTER/tide-and-tally>. The local POC folder is `tide-and-tally-poc`.
+
+## Search terms
+
+Browser trading game · merchant sailing game · dependency-free JavaScript game · local AI coding benchmark · GLM-5.3-Flash · Colibrì · incremental software development · model evaluation
+
+## License
+
+The source code and original project materials are available under the [MIT License](LICENSE). The GLM-5.3-Flash model, Colibrì runtime, and any third-party components remain under their own licenses.
