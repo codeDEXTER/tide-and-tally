@@ -2,7 +2,11 @@
 
 The local repository is ready for publication as `tide-and-tally`.
 
-## After GitHub authentication
+## Mandatory authorization boundary
+
+The agent must not initiate, request, or complete GitHub OAuth/device authorization, account login, token creation, or permission approval. The owner must perform any GitHub sign-in and authorization manually. Once the owner has independently authenticated the local `gh` CLI, the owner may run the commands below.
+
+## After owner-managed GitHub authentication
 
 From this directory:
 

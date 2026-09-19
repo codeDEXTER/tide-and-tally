@@ -1,5 +1,9 @@
 # Model-driven implementation workflow
 
+## Mandatory external-authorization rule
+
+The agent must never initiate, request, approve, or complete OAuth, device-code, account-login, API-key, or other persistent external authorization on the user's behalf. This includes opening an authorization flow, asking the user to enter a code, or clicking an authorization button. If a task needs external authorization, stop at the handoff point, explain what remains, and leave the user to complete it manually.
+
 ## Agent contract
 
 The model may:
@@ -18,6 +22,7 @@ The model may not:
 - run destructive shell commands
 - install packages without approval
 - publish commits or push to a remote without approval
+- initiate or request external account authorization of any kind
 - claim a feature works without running the checks
 
 ## Prompt template
